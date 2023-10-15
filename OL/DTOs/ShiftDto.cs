@@ -8,6 +8,7 @@ namespace OL.DTOs
 {
     public class ShiftDto : BaseEntity
     {
+        public int ShiftId { get; set; }
         public DateTime ShiftDate { get; set; }
         public int EmployeeId { get; set; }
         public int MachineId { get; set; }
