@@ -11,5 +11,6 @@ namespace BL.IServices
     public interface IShiftService :IService<Shifts>
     {
         Task<List<ShiftDto>> GetAllShiftsAsync();
+        string ExportWeeklyShiftDataToExcelUsingClosedXML();
     }
 }

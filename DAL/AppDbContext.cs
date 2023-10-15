@@ -17,7 +17,7 @@ namespace DAL
         public DbSet<Shifts> Shifts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=EMIR;Database=DijiTaskDB;Trusted_Connection=true;MultipleActiveResultSets=true;TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer(@"Server=YUNUSYAKUPOGLU;Database=DijiTaskDB;Trusted_Connection=true;MultipleActiveResultSets=true;TrustServerCertificate=true;");
         }
     }
 }

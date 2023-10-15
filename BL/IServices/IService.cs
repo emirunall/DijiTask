@@ -13,7 +13,7 @@ namespace BL.IServices
         Task<bool> CreateAsync(T TEntity);
         Task<bool> UpdateAsync(T Tentity);
         Task<T> GetByIdAsync(int id);
-        Task<T> RemoveAsync(int id);
+        Task RemoveAsync(int id);
         Task<List<T>> GetAllAsync();
         Task<List<T>> GetAllAsync(Expression<Func<T, bool>> predicate);
 

@@ -58,9 +58,13 @@ namespace BL.Services
             return data;
         }
 
-        public Task<T> RemoveAsync(int id)
+        public async Task RemoveAsync(int id)
         {
-            throw new NotImplementedException();
+            // Önce var mı diye kontrol edelim
+            var existingEntity = await _unitOfWork.GetRepository<T>().FindAsync(id);
+
+            _unitOfWork.GetRepository<T>().Remove(existingEntity);
+            var result = await _unitOfWork.SaveChangesAsync();
         }
 
         public async Task<bool> UpdateAsync(T Tentity)
